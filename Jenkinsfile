@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('code_checkout') {
             steps {
-                git 'git@github.com:siripatchava/Jenkins-pro.git'
+                git credentialsI: 'github-jenkins-cred'  url: 'git@github.com:siripatchava/Jenkins-pro.git'
             }
         }
     }
